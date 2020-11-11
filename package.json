@@ -1,0 +1,31 @@
+{
+  "name": "alessiasanna-portofolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pazka/alessiasanna-portofolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pazka/alessiasanna-portofolio/issues"
+  },
+  "homepage": "https://github.com/pazka/alessiasanna-portofolio#readme",
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-sizeme": "^2.6.12",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.5"
+  }
+}
