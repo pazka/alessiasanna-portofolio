@@ -34227,7 +34227,132 @@ exports.ServerStyleSheet = Ue;
 "production" !== "development" && "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), "production" !== "development" && "test" !== "development" && (window["__styled-components-init__"] = window["__styled-components-init__"] || 0, 1 === window["__styled-components-init__"] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window["__styled-components-init__"] += 1);
 var _default = qe;
 exports.default = _default;
-},{"react-is":"node_modules/react-is/index.js","react":"node_modules/react/index.js","shallowequal":"node_modules/shallowequal/index.js","@emotion/stylis":"node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"node_modules/process/browser.js"}],"Components/WorkCity/index.tsx":[function(require,module,exports) {
+},{"react-is":"node_modules/react-is/index.js","react":"node_modules/react/index.js","shallowequal":"node_modules/shallowequal/index.js","@emotion/stylis":"node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"node_modules/process/browser.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"Resources/icons/style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./fonts\\icomoon.eot":[["icomoon.8bd0c16b.eot","Resources/icons/fonts/icomoon.eot"],"Resources/icons/fonts/icomoon.eot"],"./fonts\\icomoon.ttf":[["icomoon.3f641e2f.ttf","Resources/icons/fonts/icomoon.ttf"],"Resources/icons/fonts/icomoon.ttf"],"./fonts\\icomoon.woff":[["icomoon.a32688de.woff","Resources/icons/fonts/icomoon.woff"],"Resources/icons/fonts/icomoon.woff"],"./fonts\\icomoon.svg":[["icomoon.4432b21e.svg","Resources/icons/fonts/icomoon.svg"],"Resources/icons/fonts/icomoon.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"Components/Icons/index.tsx":[function(require,module,exports) {
+"use strict";
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.GeoIcon = void 0;
+
+var React = __importStar(require("react"));
+
+require("../../Resources/icons/style.css");
+
+var GeoIcon = function GeoIcon() {
+  return React.createElement("i", {
+    className: 'icon-location2'
+  });
+};
+
+exports.GeoIcon = GeoIcon;
+},{"react":"node_modules/react/index.js","../../Resources/icons/style.css":"Resources/icons/style.css"}],"Components/WorkCity/index.tsx":[function(require,module,exports) {
 "use strict";
 
 var __makeTemplateObject = this && this.__makeTemplateObject || function (cooked, raw) {
@@ -34317,6 +34442,8 @@ var React = __importStar(require("react"));
 
 var styled_components_1 = __importDefault(require("styled-components"));
 
+var Icons_1 = require("../Icons");
+
 var Wrapper = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\nposition : absolute;\nleft : ", ";\ntop : ", ";\n"], ["\nposition : absolute;\nleft : ", ";\ntop : ", ";\n"])), function (props) {
   return props.x;
 }, function (props) {
@@ -34339,7 +34466,9 @@ function (_super) {
     return React.createElement(Wrapper, {
       x: this.city.coords[0],
       y: this.city.coords[1]
-    }, React.createElement("span", null, " ", this.city.name, " "), React.createElement("span", null, " ", this.city.coords.join(';'), " "));
+    }, React.createElement("a", {
+      href: '/' + this.city.name
+    }, React.createElement(Icons_1.GeoIcon, null), " ", this.city.name, " "), React.createElement("span", null, " ", this.city.coords.join(';'), " "));
   };
 
   return WorkCity;
@@ -34347,7 +34476,7 @@ function (_super) {
 
 exports.WorkCity = WorkCity;
 var templateObject_1;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"Containers/WorkMap/index.tsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../Icons":"Components/Icons/index.tsx"}],"Containers/WorkMap/index.tsx":[function(require,module,exports) {
 "use strict";
 
 var __extends = this && this.__extends || function () {
@@ -34714,7 +34843,9 @@ Object.defineProperty(exports, "__esModule", {
 var React = __importStar(require("react"));
 
 var Header = function Header() {
-  return React.createElement("h1", null, "Alessia Sanna");
+  return React.createElement("h1", null, React.createElement("a", {
+    href: '/'
+  }, "Alessia Sanna"));
 };
 
 exports.default = Header;
@@ -34946,7 +35077,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54341" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53101" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

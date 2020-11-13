@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components';
+import {GeoIcon} from '../Icons'
 
 interface ICity {
     name: string
@@ -26,8 +27,8 @@ class WorkCity extends React.Component {
     render() {
         return (
             <Wrapper x={this.city.coords[0]} y={this.city.coords[1]}>
-
-                <span> {this.city.name} </span>
+                <a href={'/' + this.city.name}> 
+                <GeoIcon/> {this.city.name} </a>
                 <span> {this.city.coords.join(';')} </span>
             </Wrapper>
         )

@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 const Header = ()=>{
-    return <h1>Alessia Sanna</h1>
+    return <h1><a href='/'>Alessia Sanna</a></h1>
 }
 
 export default Header
