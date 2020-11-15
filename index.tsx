@@ -3,6 +3,13 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import App from './Containers/App'
 
+let debug = true
+if(!debug){
+  console.debug = ()=>{}
+}else{
+  console.debug = console.info
+}
+
 ReactDOM.render(
   <App/>,
   document.getElementById('root'),

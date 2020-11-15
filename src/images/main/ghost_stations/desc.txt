@@ -1,0 +1,9 @@
+GHOST STATIONS 
+Béton, composants électroniques, dimensions à définir
+
+Les gares sont prises d’assaut. 
+
+Ghost stations serait une cartographie sonore du réseau transilien. Composé d’une dalle de béton munie d’émetteurs connectés en temps réel aux réseaux ferroviaires, il s’agit ici d’appréhender et de mesurer les flux de voyageurs par l’intermédiaire d’appareils sonores. Géolocalisées à l’intérieur de la dalle, ces différentes bornes représenteraient les différentes gares du réseau et constitueraient l’un des seuls points de repère cartographiés de l’œuvre. 
+Les différentes bornes incrustées dans le béton émettront un signal : Plus le réseau ferroviaire sera saturé sur cette localisation, plus le signal de la borne associé sera fort. Inversement, plus le signal sera faible, plus le trafic sera fluide. À l’aide d’un appareil connecté ressemblant à un détecteur de métaux (réalisé sur-mesure) le spectateur scannera la dalle de béton. Il accèdera alors aux données de la carte et l’explorera en se laissant guider par le son de l’appareil, fluctuant avec les aléas du réseau. 
+Insaisissables, ces émissions sonores sont à l’image des données de mobilités : fugaces. Cette démarche vise alors à interroger sur les zones de surcharge et les et les zones muettes, afin de mettre ces dernières en évidence au moyen d’une visualisation de données expérimentale.
+
