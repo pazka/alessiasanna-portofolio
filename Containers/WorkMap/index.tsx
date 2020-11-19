@@ -1,8 +1,19 @@
 import * as React from 'react'
 import {WorkCity,ICity} from '../../Components/WorkCity'
 import {Images} from '../../Resources'
+import styled from 'styled-components'
+import { Helmet } from 'react-helmet'
+
 
 const seedrandom = require('seedrandom')
+
+const Wrapper = styled.div`
+    height : 90vh;
+
+    @media screen and (max-device-width: 600px)  {
+        padding-top : 5vh;
+    }
+`
 
 class WorkMap extends React.Component {
     cities : ICity[]
@@ -17,7 +28,7 @@ class WorkMap extends React.Component {
 
         //set as many coords as needed and randomize them a bit
         let iterator = 0
-        let  maxy = 0.9, miny = 0.05, lasty = miny,step = (maxy-miny)/Object.keys(Images.main).length
+        let  maxy = 0.9, miny = 0.08, lasty = miny,step = (maxy-miny)/Object.keys(Images.main).length
         this.cities = Object.keys(Images.main).map(cityName =>{ 
             let res = {
                 name: cityName,
@@ -34,11 +45,15 @@ class WorkMap extends React.Component {
 
 
     render() {
-        return <div>
-            {this.cities.map(city=> 
-                <WorkCity key={city.name} city={city} />
-            )}
-        </div>
+        return (
+            <>
+                <Wrapper>
+                {this.cities.map(city=> 
+                    <WorkCity key={city.name} city={city} />
+                )}
+            </Wrapper>
+            </>
+        )
     }
 }
 

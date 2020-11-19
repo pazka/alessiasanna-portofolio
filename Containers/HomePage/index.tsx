@@ -8,8 +8,6 @@ import WorkDisplay from '../WorkDisplay';
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-
-    height : 90vh
 `
 class HomePage extends React.Component {
     constructor(props) {

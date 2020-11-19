@@ -3,7 +3,8 @@ import * as React from 'react'
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    height : 5vh
+    color : gray;
+    font-size : 0.8em;
 `;
 
 const Footer = ()=>{

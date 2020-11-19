@@ -29,6 +29,9 @@ span{
     color : gray
 }
 
+@media screen and (max-device-width: 600px)  {
+    font-size : 0.8rem    
+}
 `;
 
 class WorkCity extends React.Component {

@@ -10,4 +10,5 @@ Paris est la quatrième ville la plus embouteillée d’Europe.
 
 
 Il s’agit ici d’imaginer le réseau routier sous forme d’ensemble géométrique traduit en patterns sculpturaux. À travers cet ensemble ordonné, un algorithme tenterait de résoudre les incidents survenant sur le réseau, en privilégiant une solution optimisée dans la résolution de cette équation.  
+
 Intrinsèquement vaine, cette quête ne cesserait d’échouer, poussant le système informatisé à trouver continuellement de nouvelles solutions. Cette démarche viserait alors à mettre en évidence la dimension utopique de la mobilité urbaine, en prenant en considération la dimension multifactorielle des déplacements en ville, le principal facteur étant humain.
