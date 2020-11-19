@@ -4,3 +4,4 @@ dist/
 src/**/*.mp4
 src/**/*.jpg
 src/**/*.png
+build
