@@ -11,17 +11,25 @@ class WorkMap extends React.Component {
         super(props);
 
         //prepare Math
-        function clamp (v,min,max){return (v + (v+Math.min(0,min - v) - ((Math.max(0,v-max)*2))))}
-        let rng = seedrandom('thisIsASeedForHAvingRandomFixedCityCoordinates_1278');
+        function clampShoot (v,min,max){return (v + (v+Math.min(0,min - v) - ((Math.max(0,v-max)*2))))}
+        function clampStrict (v,min,max){return (v + (v+Math.min(0,min - v) - ((Math.max(0,v-max)*2))))}
+        let rng = seedrandom('thisIsASeedForHAvingRandomFixedCityCoordinates_7');
 
         //set as many coords as needed and randomize them a bit
-        this.cities = Object.keys(Images.main).map(cityName =>{ return {
-            name: cityName,
-            coords: [
-                clamp(rng() + (Math.random()/10  - 0.005),0.1,0.8) * (window.innerWidth),
-                clamp(rng() + (Math.random()/10 - 0.005 ),0.05,0.8)* (window.innerHeight)
-            ]
-        }});
+        let iterator = 0
+        let  maxy = 0.9, miny = 0.05, lasty = miny,step = (maxy-miny)/Object.keys(Images.main).length
+        this.cities = Object.keys(Images.main).map(cityName =>{ 
+            let res = {
+                name: cityName,
+                prettyName: cityName.split('_').map(s=>s.charAt(0).toUpperCase() + s.slice(1)).join(' '),
+                coords: [
+                    ((window.innerWidth/2)*((iterator%2))) + clampShoot( rng() + (Math.random()/10  - 0.005),0.05,0.8) * (window.innerWidth/2),
+                    clampStrict(step*iterator + rng()*step  + (Math.random()/10  - 0.005),miny,maxy) * (window.innerHeight)
+                ]
+            }
+            iterator++
+            return res;
+        });
     }
 
 

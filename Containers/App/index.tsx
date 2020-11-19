@@ -5,13 +5,10 @@ import styled from 'styled-components';
 import {HomePage} from '../HomePage';
 import  Header  from '../../Components/Header';
 import  Footer  from '../../Components/Footer';
-
+import './style.scss'
 
 const Wrapper = styled.div`
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+
 `;
 
 class App extends React.Component {

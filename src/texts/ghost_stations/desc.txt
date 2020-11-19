@@ -1,9 +1,18 @@
-GHOST STATIONS 
-Béton, composants électroniques, dimensions à définir
+ï»¿## GHOST STATIONS   
 
-Les gares sont prises d’assaut. 
 
-Ghost stations serait une cartographie sonore du réseau transilien. Composé d’une dalle de béton munie d’émetteurs connectés en temps réel aux réseaux ferroviaires, il s’agit ici d’appréhender et de mesurer les flux de voyageurs par l’intermédiaire d’appareils sonores. Géolocalisées à l’intérieur de la dalle, ces différentes bornes représenteraient les différentes gares du réseau et constitueraient l’un des seuls points de repère cartographiés de l’œuvre. 
-Les différentes bornes incrustées dans le béton émettront un signal : Plus le réseau ferroviaire sera saturé sur cette localisation, plus le signal de la borne associé sera fort. Inversement, plus le signal sera faible, plus le trafic sera fluide. À l’aide d’un appareil connecté ressemblant à un détecteur de métaux (réalisé sur-mesure) le spectateur scannera la dalle de béton. Il accèdera alors aux données de la carte et l’explorera en se laissant guider par le son de l’appareil, fluctuant avec les aléas du réseau. 
-Insaisissables, ces émissions sonores sont à l’image des données de mobilités : fugaces. Cette démarche vise alors à interroger sur les zones de surcharge et les et les zones muettes, afin de mettre ces dernières en évidence au moyen d’une visualisation de données expérimentale.
+*BÃ©ton, composants Ã©lectroniques, dimensions Ã  dÃ©finir*  
 
+
+
+
+Les gares sont prises dâ€™assaut.   
+
+
+Ghost stations serait une cartographie sonore du rÃ©seau transilien. ComposÃ© dâ€™une dalle de bÃ©ton munie dâ€™Ã©metteurs connectÃ©s en temps rÃ©el aux rÃ©seaux ferroviaires, il sâ€™agit ici dâ€™apprÃ©hender et de mesurer les flux de voyageurs par lâ€™intermÃ©diaire dâ€™appareils sonores. GÃ©olocalisÃ©es Ã  lâ€™intÃ©rieur de la dalle, ces diffÃ©rentes bornes reprÃ©senteraient les diffÃ©rentes gares du rÃ©seau et constitueraient lâ€™un des seuls points de repÃ¨re cartographiÃ©s de lâ€™Å“uvre.   
+
+
+Les diffÃ©rentes bornes incrustÃ©es dans le bÃ©ton Ã©mettront un signal : Plus le rÃ©seau ferroviaire sera saturÃ© sur cette localisation, plus le signal de la borne associÃ© sera fort. Inversement, plus le signal sera faible, plus le trafic sera fluide. Ã€ lâ€™aide dâ€™un appareil connectÃ© ressemblant Ã  un dÃ©tecteur de mÃ©taux (rÃ©alisÃ© sur-mesure) le spectateur scannera la dalle de bÃ©ton. Il accÃ¨dera alors aux donnÃ©es de la carte et lâ€™explorera en se laissant guider par le son de lâ€™appareil, fluctuant avec les alÃ©as du rÃ©seau.   
+
+
+Insaisissables, ces Ã©missions sonores sont Ã  lâ€™image des donnÃ©es de mobilitÃ©s : fugaces. Cette dÃ©marche vise alors Ã  interroger sur les zones de surcharge et les et les zones muettes, afin de mettre ces derniÃ¨res en Ã©vidence au moyen dâ€™une visualisation de donnÃ©es expÃ©rimentale.

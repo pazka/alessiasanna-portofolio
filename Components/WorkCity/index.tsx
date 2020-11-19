@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 import {Icons} from '../../Resources'
 
 interface ICity {
-    name: string
+    name: string,
+    prettyName : string
     coords: number[]
 }
 
@@ -13,6 +14,21 @@ const Wrapper = styled.div`
 position : absolute;
 left : ${props => props.x};
 top : ${props => props.y};
+
+font-size : large;
+
+i{
+    font-size : 1em ;
+}
+
+span{
+    position : relative;
+    left : 2em ;
+    top : -0.2em;
+    font-size : 0.7em;
+    color : gray
+}
+
 `;
 
 class WorkCity extends React.Component {
@@ -33,8 +49,9 @@ class WorkCity extends React.Component {
         return (
             <Wrapper x={this.city.coords[0]} y={this.city.coords[1]}>
                 <a href={'/' + this.city.name}> 
-                <Icons style={{ fontSize : "2em"}} i='icon-location2'/> {this.city.name} </a>
-                <span> {this.city.coords.map(c=>Math.round(c)).join(';')} </span>
+                    <div><Icons  i='icon-location2'/> {this.city.prettyName} </div>
+                    <span> {this.city.coords.map(c=>Math.round(c)).join(';')} </span>
+                </a>
             </Wrapper>
         )
     }
