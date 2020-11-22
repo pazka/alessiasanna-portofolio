@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html index.tsx --out-dir dist --no-cache --public-url /portofolio --no-minify"
+    "build": "parcel build index.html index.tsx --out-dir dist --no-cache --public-url ./ "
   },
   "repository": {
     "type": "git",
