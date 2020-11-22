@@ -103,7 +103,7 @@ class AlgoDisplay extends Component {
     
         this.currentNeighbours = []
         
-        this.addedVertex = [0] 
+        this.addedVertex = [Math.floor(Math.random()*(this.cities.length))] 
     }
 
     //### Process
@@ -162,6 +162,8 @@ class AlgoDisplay extends Component {
                 algorithmSteps[indexToExecute](this)
                 indexToExecute = indexToExecute + 1 < algorithmSteps.length ?  indexToExecute + 1 : 0
                 this.draw(this.canvasRef.current.getContext('2d'))
+            }else{
+                clearInterval(this.drawCycle)
             }
         }, this.drawSpeed)
     }
