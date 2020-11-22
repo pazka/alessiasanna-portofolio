@@ -1,6 +1,12 @@
 {
-    "compilerOptions": {
-      "jsx": "react",
-      "allowSyntheticDefaultImports": true
-    }
-  }
+  "compilerOptions": {
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["src/**/*"]
+}

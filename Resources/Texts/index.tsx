@@ -1,11 +1,5 @@
-
-try{
-    const texts = require('../../src/texts/**/*.txt')
-}catch(err){
-    console.error( "No texts loaded")
-    const texts = {}
-}
-
+import texts from '../../src/texts/**/*.txt'
+ 
 
 class Texts {
     AvailableFiles = {};

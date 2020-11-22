@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch, HashRouter  } from "react-router-dom";
 import { WorkMap } from '../WorkMap'
 import WorkDisplay from '../WorkDisplay';
 import styled from 'styled-components'
@@ -19,7 +19,7 @@ class HomePage extends React.Component {
         
         return (
             <Wrapper>
-                <BrowserRouter>
+                <HashRouter >
                     <Switch>
                         <Route path="/:workId">
                             <WorkDisplay> </WorkDisplay>
@@ -28,7 +28,7 @@ class HomePage extends React.Component {
                             <WorkMap />
                         </Route>
                     </Switch>
-                </BrowserRouter>
+                </HashRouter >
             </Wrapper>
         );
     }

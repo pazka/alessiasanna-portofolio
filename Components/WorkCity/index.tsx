@@ -51,7 +51,7 @@ class WorkCity extends React.Component {
     render() {
         return (
             <Wrapper x={this.city.coords[0]} y={this.city.coords[1]}>
-                <a href={'/' + this.city.name}> 
+                <a href={'#/' + this.city.name}> 
                     <div><Icons  i='icon-location2'/> {this.city.prettyName} </div>
                     <span> {this.city.coords.map(c=>Math.round(c)).join(';')} </span>
                 </a>

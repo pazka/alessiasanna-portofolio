@@ -5,7 +5,7 @@ const Wrapper = styled.div`
 `;
 
 const Header = ()=>{
-    return <Wrapper><h1><a href='/'>ALESSIA SANNA</a></h1> </Wrapper>
+    return <Wrapper><h1><a href="#">ALESSIA SANNA</a></h1> </Wrapper>
 }
 
 export default Header

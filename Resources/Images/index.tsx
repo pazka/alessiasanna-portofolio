@@ -1,10 +1,4 @@
- 
-try{
-    const images = require('../../src/images/**/*.jpg')
-}catch(err){
-    console.error( "No images loaded")
-    const images = {}
-}
+import images from '../../src/images/**/*.jpg'
 
 
 class Images {

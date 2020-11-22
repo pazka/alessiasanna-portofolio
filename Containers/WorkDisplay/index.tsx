@@ -108,7 +108,7 @@ class WorkDisplay extends React.Component {
                     </title>
                 </Helmet>
                 <Wrapper>
-                    <a id='exit' href="/" ><Icons i={'icon-cross'} /></a>
+                    <a id='exit' href="#" ><Icons i={'icon-cross'} /></a>
                     <div id='content'>
                         <div>
                             <MyImageGallery
