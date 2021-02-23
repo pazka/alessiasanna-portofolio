@@ -138,9 +138,9 @@ class WorkDisplay extends React.Component {
                 </Helmet>
                 <Wrapper>
                     <span id="navigation">
-                        <a id='next' href={"#"+this.prevWork} >{this.prevWork}<Icons i={'prev'} /></a>
+                        <a id='next' href={"#"+this.prevWork} >{this.prevWork.split('_').map(s=>s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}<Icons i={'prev'} /></a>
                         
-                        <a id='prev' href={"#"+this.nextWork} ><Icons i={'next'} />{this.nextWork}</a>
+                        <a id='prev' href={"#"+this.nextWork} ><Icons i={'next'} />{this.nextWork.split('_').map(s=>s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}</a>
                         
                         <a id='exit' href="#" ><Icons i={'close'} /></a>
                     </span>
