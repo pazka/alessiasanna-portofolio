@@ -23,14 +23,14 @@ const Wrapper = styled.div`
     
     font-size : 1rem;
     
-    transition : transform 0.2s;
+    transition : all 0.5s;
     
     margin-left : 1em;
 }
 
-#navigation > *:hover{
-    transform : scale(1.1,1.1);
-    transition : transform 0.2s
+#navigation > *:hover{    
+    color : rgb(0,0,0,0.1);
+    transition : all 0.5s;
 }
 
 
@@ -87,6 +87,18 @@ const Wrapper = styled.div`
             height : initial
         }
     }
+    
+    
+        #navigation{
+            
+              display: flex;
+              flex-direction: column-reverse;
+              align-items : flex-end;
+            
+            > *{
+                font-size : 0.8em;
+            }
+        }
   }
 `;
 

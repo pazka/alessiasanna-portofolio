@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {WorkCity,ICity} from '../../Components/WorkCity'
 import {Icons, Images} from '../../Resources'
-import AlgoDisplay from '../../Components/AlgoDisplay/indext.tsx'
+import AlgoDisplay from '../../Components/AlgoDisplay'
 import styled from 'styled-components'
 import CursorTooltip from "../../Components/CursorTooltip";
 
@@ -9,11 +9,7 @@ const seedrandom = require('seedrandom')
 
 const Wrapper = styled.div`
     ${process.env._DEBUG ? 'border : solid 1px red' : ''}
-    height : 83vh;
-
-    @media screen and (max-device-width: 600px)  {
-        padding-top : 5vh;
-    }
+    height : 78vh;
 
     z-index : 5;
     
@@ -25,7 +21,21 @@ const Wrapper = styled.div`
         .icon{
             background-color: #FFBD35;
         }
-    }        
+    }      
+
+    @media screen and (max-device-width: 600px)  {
+        padding-top : 5vh;
+        height : 65vh;
+        
+        #legend{
+            
+            top : 4rem;
+        }
+        
+        #legend td{
+            font-size : 0.8em;
+        }     
+    }  
 `
 
 class WorkMap extends React.Component {
@@ -44,7 +54,7 @@ class WorkMap extends React.Component {
 
 
         //screen continuous limits
-        let lX = [0.2,0.75] , lY = [0.35,0.8]
+        let lX = [0.2,0.75] , lY = [0.25,0.75]
         
         //discrete limits 
         let lDX = 2 , lDY = 3
@@ -55,8 +65,6 @@ class WorkMap extends React.Component {
         
 
         function boundBox(start,step,iterator,fixAmpl,rdmAmpl){
-            console.log(start,step,iterator)
-            
             return start                     // start
                  + iterator * step              // newBox
                  + ((step/fixAmpl)*rng.quick() - ((step/fixAmpl)/2)) // fixed rdm Offset
@@ -72,7 +80,8 @@ class WorkMap extends React.Component {
                     boundBox(lY[0],stepY,iY,1.1,4) * (window.innerHeight)
                 ],
                 i :iterator,
-                ongoing : Images.ongoingWork.includes(cityName)
+                ongoing : Images.ongoingWork.includes(cityName),
+                rank : ['h1','h2','h3','h4','h5'].map(r=>{return Images[r].includes(cityName) ? r : ''}).join('')
             }
 
             iY = iY >= lDY ? 0 : iY+1

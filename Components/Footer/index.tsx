@@ -9,8 +9,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     
-    bottom : 2rem;
-    right : 2rem;
+    align-items: flex-end;
 `;
 
 const Footer = ()=>{
