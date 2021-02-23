@@ -4,12 +4,13 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
     canvas {
         position : absolute;
-        left : ${props => props.x}px;
-        top : ${props => props.y}px;
+        left : ${props => props.x + 3}px;
+        top : ${props => props.y + 17}px;
         width : ${props => props.width}px;
         height : ${props => props.height}px;
 
-        z-index : -10
+        z-index : -10;
+        ${process.env._DEBUG ? 'border : solid 1px red' : ''}
     }
 `
 
@@ -26,6 +27,7 @@ class AlgoDisplay extends Component {
         super(props);
 
         this.cities = props.cities;
+               
 
         let minCity, maxCity;
         minCity = [...this.cities[0]];
@@ -153,11 +155,16 @@ class AlgoDisplay extends Component {
     }
 
     executeAlgorithm(){
+        
         let indexToExecute = 0
         this.prim_init(this.cities)
         let algorithmSteps = [this.prim_new_neighbour,this.prim_select_minimal_edge,this.prim_add_edge_to_result]
 
         this.drawCycle = setInterval(() => {
+            if(!this.canvasRef.current){
+                return;
+            }
+            
             if(this.addedVertex.length < this.cities.length){
                 algorithmSteps[indexToExecute](this)
                 indexToExecute = indexToExecute + 1 < algorithmSteps.length ?  indexToExecute + 1 : 0

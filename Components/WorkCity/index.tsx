@@ -5,7 +5,8 @@ import {Icons} from '../../Resources'
 
 interface ICity {
     name: string,
-    prettyName : string
+    prettyName : string,
+    ongoing : boolean,
     coords: number[]
 }
 
@@ -17,8 +18,9 @@ top : ${props => props.y};
 
 font-size : large;
 
-i{
-    font-size : 1em ;
+.icon{
+    font-size : 1.5em;
+    background-color: #FFBD35;    
 }
 
 span{
@@ -32,10 +34,28 @@ span{
 @media screen and (max-device-width: 600px)  {
     font-size : 0.8rem    
 }
+
+a * {
+    transition : all 0.5s;
+}
+
+
+a:hover {
+    color : black;
+    transform : scale(1.2,1.2);
+    transition : all 0.2s;    
+    
+    .icon{
+    background-color: black;
+        font-size : 1.65em;  
+    }
+
+}
+
 `;
 
 class WorkCity extends React.Component {
-    city : ICity
+    city : ICitys
     
     propTypes : {
         city : PropTypes.RequiredKeys<ICity>
@@ -50,9 +70,9 @@ class WorkCity extends React.Component {
     
     render() {
         return (
-            <Wrapper x={this.city.coords[0]} y={this.city.coords[1]}>
+            <Wrapper x={this.city.coords[0]} y={this.city.coords[1]} >
                 <a href={'#/' + this.city.name}> 
-                    <div><Icons  i='icon-location2'/> {this.city.prettyName} </div>
+                    <div><Icons i={this.city.ongoing ? 'pin_empty' : 'pin_filled'}/> {this.city.prettyName} </div>
                     <span> {this.city.coords.map(c=>Math.round(c)).join(';')} </span>
                 </a>
             </Wrapper>

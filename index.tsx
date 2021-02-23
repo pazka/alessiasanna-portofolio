@@ -3,8 +3,8 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import App from './Containers/App'
 
-let debug = true
-if(!debug){
+
+if(!process.env._DEBUG){
   console.debug = ()=>{}
 }else{
   console.debug = console.info

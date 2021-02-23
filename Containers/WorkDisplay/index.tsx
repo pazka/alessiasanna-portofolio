@@ -10,12 +10,27 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 const Wrapper = styled.div`
 
+#navigation{
 
-#exit{
     position : absolute;
     right : 2vw;
     top : 2em;
-    font-size : 1.5rem;
+    
+    display : flex;
+}
+
+#navigation > *{
+    
+    font-size : 1rem;
+    
+    transition : transform 0.2s;
+    
+    margin-left : 1em;
+}
+
+#navigation > *:hover{
+    transform : scale(1.1,1.1);
+    transition : transform 0.2s
 }
 
 
@@ -36,7 +51,7 @@ const Wrapper = styled.div`
     }
 
     .workImage img{
-        height : 68vh
+        height : 65vh
     }
     .fullscreen .workImage img{
         height : initial
@@ -79,11 +94,25 @@ class WorkDisplay extends React.Component {
     workId: String
     text: String
     images: any[]
+    nextWork : string
+    prevWork : string
 
+    componentDidUpdate() {
+        window.location.reload()
+    }
+    
     constructor(props) {
         super(props);
 
         this.workId = props.match.params.workId
+        
+        let avWorks = Object.keys(Images.full)
+
+        let prevWorkId = avWorks.indexOf(this.workId)-1 < 0 ?  avWorks.length-1  :  avWorks.indexOf(this.workId)-1
+        let nextWorkId = avWorks.indexOf(this.workId)+1 >= avWorks.length ?  0  :  avWorks.indexOf(this.workId)+1
+
+        this.prevWork = avWorks[prevWorkId]
+        this.nextWork = avWorks[nextWorkId]
 
 
         this.images = Object.keys(Images.main[this.workId]).map((imageIndex) => {
@@ -108,7 +137,13 @@ class WorkDisplay extends React.Component {
                     </title>
                 </Helmet>
                 <Wrapper>
-                    <a id='exit' href="#" ><Icons i={'icon-cross'} /></a>
+                    <span id="navigation">
+                        <a id='next' href={"#"+this.prevWork} >{this.prevWork}<Icons i={'prev'} /></a>
+                        
+                        <a id='prev' href={"#"+this.nextWork} ><Icons i={'next'} />{this.nextWork}</a>
+                        
+                        <a id='exit' href="#" ><Icons i={'close'} /></a>
+                    </span>
                     <div id='content'>
                         <div>
                             <MyImageGallery

@@ -8,14 +8,14 @@ const Wrapper = styled.div`
 
     display: flex;
     flex-direction: column;
+    
+    bottom : 2rem;
+    right : 2rem;
 `;
 
 const Footer = ()=>{
     return <Wrapper>
         <p>Designed by Alessia Sanna, Delivered by Alexandre Weisser</p>
-        <a href = "mailto: a.sannaprojects@gmail.com">a.sannaprojects@gmail.com</a>
-
-        <a href="tel:06.74.00.25.70">06.74.00.25.70</a>
     </Wrapper>
 }
 

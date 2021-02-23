@@ -1,20 +1,31 @@
 import * as React from 'react'
 import {WorkCity,ICity} from '../../Components/WorkCity'
-import {Images} from '../../Resources'
+import {Icons, Images} from '../../Resources'
 import AlgoDisplay from '../../Components/AlgoDisplay/indext.tsx'
 import styled from 'styled-components'
-
+import CursorTooltip from "../../Components/CursorTooltip";
 
 const seedrandom = require('seedrandom')
 
 const Wrapper = styled.div`
-    height : 90vh;
+    ${process.env._DEBUG ? 'border : solid 1px red' : ''}
+    height : 83vh;
 
     @media screen and (max-device-width: 600px)  {
         padding-top : 5vh;
     }
 
-    z-index : 5
+    z-index : 5;
+    
+    #legend{
+        position : absolute;
+        right : 2rem;
+        top : 2rem;
+        
+        .icon{
+            background-color: #FFBD35;
+        }
+    }        
 `
 
 class WorkMap extends React.Component {
@@ -24,25 +35,48 @@ class WorkMap extends React.Component {
         super(props);
 
         //prepare Math
-        function clampShoot (v,min,max){return (v + (v+Math.min(0,min - v) - ((Math.max(0,v-max)*2))))}
         function clampStrict (v,min,max){return ((Math.min(max,(Math.max(min,v)))}
-        let rng = seedrandom('thisIsASeedForHAvingRandomFixedCityCoordinates_7');
+        let rng = seedrandom('thisIsASeedForHAvingRandomFixedCityCoordinates_dds7');
 
-        //set as many coords as needed and randomize them a bit
-        let iterator = 0
-        let  maxy = 0.9, miny = 0.1, lasty = miny,step = (maxy-miny)/Object.keys(Images.main).length
+        let marginX,marginY,boxX,boxY;
 
-        this.cities = Object.keys(Images.main).map(cityName =>{ 
+        let  iX = 0,  iY = 0
+
+
+        //screen continuous limits
+        let lX = [0.2,0.75] , lY = [0.35,0.8]
+        
+        //discrete limits 
+        let lDX = 2 , lDY = 3
+        
+        //continous steps to jump = coords system
+        let stepX = (lX[1]-lX[0])/lDX
+        let stepY = (lY[1]-lY[0])/lDY
+        
+
+        function boundBox(start,step,iterator,fixAmpl,rdmAmpl){
+            console.log(start,step,iterator)
+            
+            return start                     // start
+                 + iterator * step              // newBox
+                 + ((step/fixAmpl)*rng.quick() - ((step/fixAmpl)/2)) // fixed rdm Offset
+                + ((step/rdmAmpl)*Math.random() - ((step/rdmAmpl)/2)) // rdm Offset
+        }
+
+        this.cities = Object.keys(Images.main).map((cityName,iterator) =>{ 
             let res = {
                 name: cityName,
                 prettyName: cityName.split('_').map(s=>s.charAt(0).toUpperCase() + s.slice(1)).join(' '),
                 coords: [
-                    ((window.innerWidth/2)*((iterator%2))) + clampStrict( rng() + (Math.random()/5  - 0.02),0.0,0.8) * (window.innerWidth/2),
-                    clampStrict(step*iterator + rng()*step  + (Math.random()/5  - 0.02),miny,maxy) * (window.innerHeight)
-                ]
-                i :iterator
+                    boundBox(lX[0],stepX,iX,1.5,4) * (window.innerWidth),
+                    boundBox(lY[0],stepY,iY,1.1,4) * (window.innerHeight)
+                ],
+                i :iterator,
+                ongoing : Images.ongoingWork.includes(cityName)
             }
-            iterator++
+
+            iY = iY >= lDY ? 0 : iY+1
+            iX = iY != 0 ? iX : (iX >= lDX ? 0 : iX+1)
             return res;
         });
     }
@@ -50,14 +84,28 @@ class WorkMap extends React.Component {
 
     render() {
         return (
-            <>
+            <CursorTooltip>
                 <Wrapper>
                 <AlgoDisplay cities={this.cities.map(c=>c.coords) }/>
                 {this.cities.map(city=> 
                     <WorkCity key={city.i} city={city} />
                 )}
+                <span id={"legend"}>
+                    <table> 
+                        <tbody>  
+                            <tr>
+                                <td><Icons i ='pin_filled'/> </td>
+                                <td><p> Projets produits</p></td>
+                            </tr>
+                            <tr>
+                                <td><Icons i ='pin_empty' /></td>
+                                <td><p> Projets en cours</p></td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                </span>
                 </Wrapper>
-            </>
+            </CursorTooltip>
         )
     }
 }

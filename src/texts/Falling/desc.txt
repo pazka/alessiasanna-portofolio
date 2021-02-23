@@ -1,1 +1,15 @@
-﻿## FALLING
+## *Falling*  
+
+*Bois peint, moteurs, dimensions évolutives*
+
+Inspirée des jeux de construction en bois, *Falling* est une sculpture performative représentant un ensemble architectural urbain.
+
+La hauteur des différentes tours est déterminée en fonction de données territoriales telles que la qualité de l’air. Chaque construction représente donc un lieu et une période ciblée.
+
+Équipées de composantes électroniques, les tours reçoivent des données en temps réel. Reliées entre elles par un ensemble de systèmes motorisés, l’équilibre des tours menace de s’effondrer à chaque instant si la qualité de l’air se détériore. 
+
+L’enregistrement d’un pic de pollution entraînerait alors la chute de l’une des constructions. En cela, *Falling* est une ruine en devenir, réagissant aux flux de data.
+  
+Destinée à s’effondrer, cette œuvre évolutive n’existe qu’à travers sa sensibilité numérique.
+
+*Falling* tente ainsi de créer une correspondance directe entre les activités humaines polluantes et leurs conséquences.
