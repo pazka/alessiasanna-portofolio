@@ -1,6 +1,4 @@
-﻿
-
-import * as React from 'react'
+﻿import * as React from 'react'
 import styled from 'styled-components'
 import {Icons} from "../../Resources";
 
@@ -54,6 +52,7 @@ const Wrapper = styled.div`
     }
 }
 `
+
 class CV extends React.Component {
     constructor(props) {
         super(props);
@@ -66,9 +65,9 @@ class CV extends React.Component {
             <Wrapper>
                 
                 <span id="navigation">
-                    <a id='exit' href="#" ><Icons i={'close'} /></a>
+                    <a id='exit' href="#"><Icons i={'close'}/></a>
                 </span>
-                
+
                 <h3>CURRICULUM VITAE </h3>
                 <div className={"contact"}>
                     <a href={"mailto:a.sannaprojects@gmail.com"}>
@@ -82,7 +81,7 @@ class CV extends React.Component {
                     </p>
                 </div>
                 <h3>PARCOURS </h3>
-                
+
                 <h5>EXPOSITIONS PERSONNELLES</h5>
                 <table>
                     <tbody>
@@ -108,8 +107,8 @@ class CV extends React.Component {
                         </td>
                         <td>
                             <p>
-                            <em>Screen City</em> – Étape de recherche
-                        </p>
+                                <em>Screen City</em> – Étape de recherche
+                            </p>
                             <p>
                                 &gt; du 18/06 au 03/10
                             </p>
@@ -142,40 +141,40 @@ class CV extends React.Component {
                 <h5>EXPOSITIONS COLLECTIVES</h5>
                 <table>
                     <tbody>
-                            <tr>
-                                <td><p>2019</p>
-                                </td>
-                                <td>
-                                    <p>
-                                        <em>Résistances</em>
-                                    </p>
-                                    <p>
-                                        &gt; du 07/03 au 16/03
-                                    </p>
-                                    <p>
-                                        Strasbourg, Palais Universitaire – Cryogénie
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><p>2017</p>
-                                </td>
-                                <td>
-                                    <p>
-                                        Retour de Bataville – Faire Société
-                                    </p>
-                                    <p>
-                                        &gt; du 27/03 au 30/03
-                                    </p>
-                                    <p>
-                                        Commissariat d’exposition : Le Laboratoire des Hypothèses
-                                    </p>
-                                    <p>
-                                        Metz, Théâtre du Saulcy
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
+                    <tr>
+                        <td><p>2019</p>
+                        </td>
+                        <td>
+                            <p>
+                                <em>Résistances</em>
+                            </p>
+                            <p>
+                                &gt; du 07/03 au 16/03
+                            </p>
+                            <p>
+                                Strasbourg, Palais Universitaire – Cryogénie
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>2017</p>
+                        </td>
+                        <td>
+                            <p>
+                                Retour de Bataville – Faire Société
+                            </p>
+                            <p>
+                                &gt; du 27/03 au 30/03
+                            </p>
+                            <p>
+                                Commissariat d’exposition : Le Laboratoire des Hypothèses
+                            </p>
+                            <p>
+                                Metz, Théâtre du Saulcy
+                            </p>
+                        </td>
+                    </tr>
+                    </tbody>
                 </table>
                 <h5>RÉSIDENCE</h5>
                 <table>
@@ -195,10 +194,10 @@ class CV extends React.Component {
                                 Strasbourg, Le Shadok
                             </p>
                         </td>
-                </tr>
-                </tbody>
+                    </tr>
+                    </tbody>
                 </table>
-                
+
                 <h5>PUBLICATIONS / INTERVENTIONS</h5>
                 <table>
                     <tbody>
@@ -220,7 +219,7 @@ class CV extends React.Component {
                                 broché
                             </p>
                             <p>
-                                Contribution :    <em>Screen City, figure paysagère de la ville intelligente</em>
+                                Contribution : <em>Screen City, figure paysagère de la ville intelligente</em>
                             </p>
                         </td>
                     </tr>
@@ -229,7 +228,7 @@ class CV extends React.Component {
                         </td>
                         <td>
                             <p>
-                                Intervention –    <em>Réaliser des œuvres d’art à partir des données des villes </em>
+                                Intervention – <em>Réaliser des œuvres d’art à partir des données des villes </em>
                             </p>
                             <p>
                                 &gt; 17/10
@@ -283,7 +282,7 @@ class CV extends React.Component {
                     </tr>
                     </tbody>
                 </table>
-                
+
                 <h5>PRIX </h5>
                 <table>
                     <tbody>
@@ -305,7 +304,7 @@ class CV extends React.Component {
                         </td>
                         <td>
                             <p>
-                                Lauréate du prix    <em>Paris Panthéon Sorbonne pour l’art Contemporain</em>
+                                Lauréate du prix <em>Paris Panthéon Sorbonne pour l’art Contemporain</em>
                             </p>
                         </td>
                     </tr>
@@ -323,9 +322,9 @@ class CV extends React.Component {
                 <p>
                     <strong></strong>
                 </p>
-                
+
                 <h5>FORMATIONS</h5>
-                
+
                 <table>
                     <tbody>
                     <tr>

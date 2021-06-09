@@ -1,11 +1,10 @@
 import * as React from 'react'
-import { withRouter } from "react-router";
+import {withRouter} from "react-router";
 import styled from 'styled-components';
-import MyImageGallery from 'react-image-gallery';
+import MyImageGallery from '../../Components/MyImageGallery';
 import ReactMarkdown from 'react-markdown'
-import { Images, Texts, Icons } from '../../Resources';
-import { Helmet } from 'react-helmet'
-import "react-image-gallery/styles/css/image-gallery.css";
+import {Images, Texts, Icons} from '../../Resources';
+import {Helmet} from 'react-helmet'
 
 
 const Wrapper = styled.div`
@@ -61,6 +60,14 @@ const Wrapper = styled.div`
         color : blue;
         text-decoration : underline;
     }
+    
+    .image-gallery-icon{
+        filter : none;
+        color : #CCCCCC;
+    }
+    .image-gallery-icon:hover{
+        color : #767676
+    }
 }
 
 @media (orientation: portrait) {
@@ -106,22 +113,22 @@ class WorkDisplay extends React.Component {
     workId: String
     text: String
     images: any[]
-    nextWork : string
-    prevWork : string
+    nextWork: string
+    prevWork: string
 
     componentDidUpdate() {
         window.location.reload()
     }
-    
+
     constructor(props) {
         super(props);
 
         this.workId = props.match.params.workId
-        
+
         let avWorks = Object.keys(Images.full)
 
-        let prevWorkId = avWorks.indexOf(this.workId)-1 < 0 ?  avWorks.length-1  :  avWorks.indexOf(this.workId)-1
-        let nextWorkId = avWorks.indexOf(this.workId)+1 >= avWorks.length ?  0  :  avWorks.indexOf(this.workId)+1
+        let prevWorkId = avWorks.indexOf(this.workId) - 1 < 0 ? avWorks.length - 1 : avWorks.indexOf(this.workId) - 1
+        let nextWorkId = avWorks.indexOf(this.workId) + 1 >= avWorks.length ? 0 : avWorks.indexOf(this.workId) + 1
 
         this.prevWork = avWorks[prevWorkId]
         this.nextWork = avWorks[nextWorkId]
@@ -150,21 +157,24 @@ class WorkDisplay extends React.Component {
                 </Helmet>
                 <Wrapper>
                     <span id="navigation">
-                        <a id='next' href={"#"+this.prevWork} >{this.prevWork.split('_').map(s=>s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}<Icons i={'prev'} /></a>
+                        <a id='next'
+                           href={"#" + this.prevWork}>{this.prevWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}<Icons
+                            i={'prev'}/></a>
                         
-                        <a id='prev' href={"#"+this.nextWork} ><Icons i={'next'} />{this.nextWork.split('_').map(s=>s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}</a>
+                        <a id='prev' href={"#" + this.nextWork}><Icons
+                            i={'next'}/>{this.nextWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}</a>
                         
-                        <a id='exit' href="#" ><Icons i={'close'} /></a>
+                        <a id='exit' href="#"><Icons i={'close'}/></a>
                     </span>
                     <div id='content'>
                         <div>
                             <MyImageGallery
                                 lazyLoad={true}
                                 showPlayButton={false}
-                                items={this.images} />
+                                items={this.images}/>
                         </div>
                         <div>
-                            <ReactMarkdown linkTarget="_blank" source={this.text} />
+                            <ReactMarkdown linkTarget="_blank" source={this.text}/>
                         </div>
                     </div>
                 </Wrapper>

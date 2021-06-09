@@ -5,8 +5,8 @@ import {Icons} from '../../Resources'
 
 interface ICity {
     name: string,
-    prettyName : string,
-    ongoing : boolean,
+    prettyName: string,
+    ongoing: boolean,
     coords: number[]
 }
 
@@ -20,7 +20,7 @@ font-size : large;
 
 .icon{
     font-size : 1.5em;
-    background-color: #FFBD35;    
+    background-color: #BF9DA8;    
 }
 
 span{
@@ -46,8 +46,9 @@ a:hover {
     transition : all 0.2s;    
     
     .icon{
-    background-color: black;
-        font-size : 1.65em;  
+        background-color: black;
+        font-size : 1.6em ;
+        height : 1.1em;  
     }
 }
 
@@ -103,35 +104,33 @@ h5{
 `;
 
 class WorkCity extends React.Component {
-    city : ICitys
-    
-    propTypes : {
-        city : PropTypes.RequiredKeys<ICity>
-        key : PropTypes.IsOptional<String>
+    city: ICitys
+
+    propTypes: {
+        city: PropTypes.RequiredKeys<ICity>
+        key: PropTypes.IsOptional<String>
     }
 
-    constructor(props ) {
+    constructor(props) {
         super(props);
 
         this.city = props.city
-        
-        
     }
-    
+
     render() {
         const Rank = `${this.city.rank}`
         console.log(Rank)
-        
+
         return (
-            <Wrapper x={this.city.coords[0]} y={this.city.coords[1]} >
-                <a href={'#/' + this.city.name}> 
+            <Wrapper x={this.city.coords[0]} y={this.city.coords[1]}>
+                <a href={'#/' + this.city.name}>
                     <Rank><Icons i={this.city.ongoing ? 'pin_empty' : 'pin_filled'}/> {this.city.prettyName} </Rank>
-                    <span> {this.city.coords.map(c=>Math.round(c)).join(';')} </span>
+                    <span> {this.city.coords.map(c => Math.round(c)).join(';')} </span>
                 </a>
             </Wrapper>
         )
     }
 }
 
-export { WorkCity, ICity }
+export {WorkCity, ICity}
 

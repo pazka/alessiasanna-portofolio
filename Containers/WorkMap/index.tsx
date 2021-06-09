@@ -19,7 +19,7 @@ const Wrapper = styled.div`
         top : 2rem;
         
         .icon{
-            background-color: #FFBD35;
+            background-color: #BF9DA8;
         }
     }      
 
