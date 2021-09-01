@@ -168,14 +168,16 @@ class AlgoDisplay extends Component {
             if(this.addedVertex.length < this.cities.length){
                 algorithmSteps[indexToExecute](this)
                 indexToExecute = indexToExecute + 1 < algorithmSteps.length ?  indexToExecute + 1 : 0
-                this.draw(this.canvasRef.current.getContext('2d'))
+                this.draw()
             }else{
                 clearInterval(this.drawCycle)
             }
         }, this.drawSpeed)
     }
 
-    draw(cnv){
+    draw(){
+        let cnv = this.canvasRef.current.getContext('2d')
+        
         cnv.fillStyle = "white";
         cnv.fillRect(0,0,this.width,this.height)
 
