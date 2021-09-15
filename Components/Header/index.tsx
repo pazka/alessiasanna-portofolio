@@ -18,7 +18,6 @@ const Wrapper = styled.div`
     h4 {
         margin-top : 0rem;
         font-weight : normal;
-        color : #555555
     }
     
     .navigation{

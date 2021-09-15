@@ -183,7 +183,7 @@ class AlgoDisplay extends Component {
 
         cnv.save()
         cnv.lineWidth = 0.7;
-        cnv.strokeStyle = "lightgrey";
+        cnv.strokeStyle = "lightblue";
         cnv.setLineDash([4, 10]);
 
         this.notAddedEdge.forEach(edgeIndex=>{
@@ -195,7 +195,7 @@ class AlgoDisplay extends Component {
         cnv.restore()
 
         cnv.lineWidth = 2;
-        cnv.strokeStyle = "grey";
+        cnv.strokeStyle = "blue";
         this.addedEdge.forEach(edgeIndex=>{
             cnv.beginPath();
             cnv.moveTo( this.cities[edgeIndex[0]][0] , this.cities[edgeIndex[0]][1]);
@@ -217,7 +217,7 @@ class AlgoDisplay extends Component {
 
         if(this.selectedMinimalEdge){
             cnv.lineWidth = 1;
-            cnv.strokeStyle = "blue";
+            cnv.strokeStyle = "orange";
             
             cnv.beginPath();
             cnv.moveTo( this.cities[this.selectedMinimalEdge[0]][0] , this.cities[this.selectedMinimalEdge[0]][1]);

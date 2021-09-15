@@ -20,7 +20,7 @@ font-size : large;
 
 .icon{
     font-size : 1.5em;
-    background-color: #BF9DA8;    
+    background-color: #384AD3;    
 }
 
 span{
@@ -46,11 +46,13 @@ a:hover {
     transition : all 0.2s;    
     
     .icon{
-        background-color: black;
+        background-color: F3A78F;
         font-size : 1.6em ;
         height : 1.1em;  
     }
 }
+
+
 
 h1{
  font-size : 1.2em;
