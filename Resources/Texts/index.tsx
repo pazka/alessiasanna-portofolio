@@ -11,7 +11,9 @@ class Texts {
 
         Object.keys(texts).forEach(key => {
             this.AvailableFiles[key] = texts[key].desc
-        });        
+        });
+        
+        console.log(this)
     }
 
     GetText(filePath):String{
@@ -28,6 +30,7 @@ class Texts {
             return "No text available."
         }
     }
+
     //could add post-treatments here
 }
 
