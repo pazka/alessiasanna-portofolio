@@ -28,9 +28,10 @@ const Wrapper = styled.div`
             padding : 0.5em;
             transition : all 0.5s;
         }
+        
         a::before {
             content: "●";
-            padding-right : 1.5em;
+            padding-right : 0.5em;
         }
         
         a:hover{
