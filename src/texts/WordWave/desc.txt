@@ -1,0 +1,25 @@
+﻿## WordWave
+
+
+*Performance, Reconnaissance vocale, Vidéoprojection* 
+
+- ENQUETE 38 OCCURENCES
+- PERSONNE 39 OCCURENCES
+- CREATION 39 OCCURENCES
+- POLITIQUE 40 OCCURENCES
+- EXPERIENCE 42 OCCURENCES
+- PROJET 44 OCCURENCES
+- PRATIQUES 47 OCCURENCES
+- ARTISTES 50 OCCURENCES
+- TERRAIN 55 OCCURENCES
+- RECHERCHE 78 OCCURENCES
+
+
+Ces déclamations correspondent au nombre précis de fois où ces mots ont été évoqués durant la journée et décomptés par le dispositif Sensitive words à l’occasion du colloque « enquête de terrain, l’art de croisé les gens...
+
+La visualisation, opérée par un procédé de speech to texte – comprenez de paroles converties en texte – donne à voir ce comptage.
+
+Les mots ayant été très souvent cités appariassent en grand format, tandis que les autres mots, plus petits, tendent à se dissiper dans la boucle.
+
+Mais que représentent cet échantillonnage ? Quels récits, développé en parallèle de nos prises de paroles, ces formes génératives ont-elles à nous dire ?  
+
