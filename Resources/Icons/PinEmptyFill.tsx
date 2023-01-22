@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-const PinEmptyFill = (props) => (  <svg className="icon-pin_empty_fill" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512"  xml:space="preserve">
+const PinEmptyFill = (props) => (  <svg className="icon-pin_empty_fill" version="1.1" id="Layer_1"  
+	 viewBox="0 0 512 512"  >
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 	.st1{fill:#FFBD35;}

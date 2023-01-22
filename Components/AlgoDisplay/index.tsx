@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
     canvas {
         position : absolute;
-        left : calc(${props => props.x}px + ${3}px);
-        top : calc(${props => props.y}px + ${31}px);
+        left : calc(${props => props.x}px + ${0}px);
+        top : calc(${props => props.y}px + ${25}px);
         width : ${props => props.width}px;
         height : ${props => props.height}px;
 

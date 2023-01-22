@@ -20,6 +20,8 @@ const tsxFiles = svgFiles.map(file => {
     svg = svg.replace('<svg', `<svg className="icon-${name}"`);
     //replace existing class properties with className
     svg = svg.replace(/class="/g, 'className="');
+    //remove xlmns properties
+    svg = svg.replace(/xml(ns)?(:.*)?=".*?"/g, '');
 
     name = name.replace(/[-_]([a-z])/g, function (g) { return g[1].toUpperCase(); });
     name = name.charAt(0).toUpperCase() + name.slice(1);

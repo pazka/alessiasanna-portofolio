@@ -3,9 +3,9 @@ import {withRouter} from "react-router";
 import styled from 'styled-components';
 import MyImageGallery from '../../Components/MyImageGallery';
 import ReactMarkdown from 'react-markdown'
-import {Images, Texts, Icons} from '../../Resources';
+import {Images, Texts} from '../../Resources';
 import {Helmet} from 'react-helmet'
-import { Next, Prev } from '../../Resources/Icons';
+import {Close, Next, Prev} from '../../Resources/Icons';
 
 
 const Wrapper = styled.div`
@@ -158,12 +158,17 @@ class WorkDisplay extends React.Component {
                 </Helmet>
                 <Wrapper>
                     <span id="navigation">
-                        <a id='next'
-                           href={"#" + this.prevWork}>{this.prevWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}<Prev/></a>
+                        <a id='next' href={"#" + this.prevWork}>
+                            <Prev/>
+                            {this.prevWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
+                        </a>
                         
-                        <a id='prev' href={"#" + this.nextWork}><Next/>{this.nextWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}</a>
+                        <a id='prev' href={"#" + this.nextWork}>
+                            <Next/>
+                            {this.nextWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
+                        </a>
                         
-                        <a id='exit' href="#"><Icons i={'close'}/></a>
+                        <a id='exit' href="#"><Close/></a>
                     </span>
                     <div id='content'>
                         <div>

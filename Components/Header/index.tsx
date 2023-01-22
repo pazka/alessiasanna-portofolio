@@ -11,7 +11,7 @@ const Wrapper = styled.div`
         transition : all 0.5s;
     }
     h1:hover{
-            color : rgb(0,0,0,0.1);
+            color : blue;
             transition : all 0.5s;
         }
     
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
         }
         
         a:hover{
-            color : rgb(0,0,0,0.1);
+            color : blue;
             transition : all 0.5s;
         }
     }

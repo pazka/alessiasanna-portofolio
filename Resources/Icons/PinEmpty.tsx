@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-const PinEmpty = (props) => (  <svg className="icon-pin_empty" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512"  xml:space="preserve">
+const PinEmpty = (props) => (  <svg className="icon-pin_empty" version="1.1" id="Capa_1"  
+	 viewBox="0 0 512 512"  >
 <g>
 	<g>
 		<path d="M256,0C156.748,0,76,80.748,76,180c0,33.534,9.289,66.26,26.869,94.652l142.885,230.257
