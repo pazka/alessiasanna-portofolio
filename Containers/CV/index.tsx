@@ -1,6 +1,6 @@
 ﻿import * as React from 'react'
 import styled from 'styled-components'
-import {Icons} from "../../Resources";
+import { Close } from '../../Resources/Icons';
 
 const Wrapper = styled.div`
     
@@ -65,7 +65,7 @@ class CV extends React.Component {
             <Wrapper>
                 
                 <span id="navigation">
-                    <a id='exit' href="#"><Icons i={'close'}/></a>
+                    <a id='exit' href="#"><Close/></a>
                 </span>
 
                 <h3>CURRICULUM VITAE </h3>
@@ -87,17 +87,39 @@ class CV extends React.Component {
                     <tbody>
                     <tr>
                         <td>
-                            <p>2021</p>
+                            <p>2022</p>
                         </td>
                         <td>
                             <p>
-                                <em>Screen City_Strasbourg</em> (à venir)
+                                <em>WordWave</em>
                             </p>
                             <p>
-                                &gt; 09/2021
+                                &gt; du 05/12/2022 au 07/12/2022
                             </p>
                             <p>
-                                Strasbourg, Festival Ososphère
+                                À l'occasion du symposium "Data et Développement Durable" organisé par Sorbonne Dévelopement Durable 
+                            </p>
+                            <p>
+                                Paris 1 Panthéon-Sorbonne / Nogent-sur-Marne
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>2022</p>
+                        </td>
+                        <td>
+                            <p>
+                                <em>Screen City_Strasbourg</em>
+                            </p>
+                            <p>
+                                &gt; du 16/09/2022 au 07/10/2022
+                            </p>
+                            <p>
+                                À l'occasion du festival Ososphère, de la journée Européenne du Patrimoine et de la journée mondiale de l'Architecture
+                            </p>
+                            <p>
+                                Strasbourg, 5e Lieu
                             </p>
                         </td>
                     </tr>
@@ -201,6 +223,24 @@ class CV extends React.Component {
                 <h5>PUBLICATIONS / INTERVENTIONS</h5>
                 <table>
                     <tbody>
+                    <tr>
+                        <td><p>2022</p>
+                        </td>
+                        <td>
+                            <p>
+                                Conférence – <em>Data et représentations de la ville</em>
+                            </p>
+                            <p>
+                                &gt; 20/10
+                            </p>
+                            <p>
+                                Avec Olivier Banaszak et Thierry Danet, animée par Edith Lauton
+                            </p>
+                            <p>
+                                Strasbourg, 5e Lieu
+                            </p>
+                        </td>
+                    </tr>
                     <tr>
                         <td><p>2020</p>
                         </td>

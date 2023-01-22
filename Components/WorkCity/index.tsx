@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
-import {Icons} from '../../Resources'
+import {PinCircleEmpty, PinCircleFilled, PinFilled} from '../../Resources/Icons';
 
 interface ICity {
     name: string,
@@ -18,12 +18,8 @@ top : ${props => props.y};
 
 font-size : large;
 
-.icon{
-    font-size : 1.5em;
-    background-color: #384AD3;    
-}
 
-span{
+.coords{
     position : relative;
     left : 2em ;
     top : -0.2em;
@@ -39,16 +35,19 @@ a * {
     transition : all 0.5s;
 }
 
+.icon{
+    font-size : 0.8em;
+}
 
 a:hover {
-    color : black;
-    transform : scale(1.2,1.2);
-    transition : all 0.2s;    
+    color :  #F3A78F;
+    transition : all 0.2s;  
+    h1,h2,h3,h4,h5{
+        font-size : 1.2em ;
+    }
     
     .icon{
-        background-color: F3A78F;
-        font-size : 1.6em ;
-        height : 1.1em;  
+        transition : all 0.2s;  
     }
 }
 
@@ -126,8 +125,15 @@ class WorkCity extends React.Component {
         return (
             <Wrapper x={this.city.coords[0]} y={this.city.coords[1]}>
                 <a href={'#/' + this.city.name}>
-                    <Rank><Icons i={this.city.ongoing ? 'pin_empty' : 'pin_filled'}/> {this.city.prettyName} </Rank>
-                    <span> {this.city.coords.map(c => Math.round(c)).join(';')} </span>
+                    <Rank>
+                        <span>
+                            {
+                                this.city.ongoing ? <PinCircleEmpty/> : <PinCircleFilled/>
+                            }
+                            {this.city.prettyName}
+                        </span>
+                    </Rank>
+                    <span className={"coords"}> {this.city.coords.map(c => Math.round(c)).join(';')} </span>
                 </a>
             </Wrapper>
         )

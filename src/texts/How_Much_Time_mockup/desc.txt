@@ -4,7 +4,7 @@
 
 Avant l’invention de l’écriture, différentes civilisations ont usé de stratégies pour mettre au point une administration comptable. L’Empire inca est particulièrement représentatif de ces systèmes de comptages, réalisés à travers l’usage de cordelettes nouées nommées «Quipu».
 
-Ces pratiques marquent la préhistoire des dispositifs de visualisation.   
+Ces pratiques marquent la préhistoire des dispositifs de visualisation.   a
 
 Ces méthodes ancestrales d’encodage de l’information inspirent a réalisation de l’oeuvre *How Many?*.
 Ici, les cordelettes perlées, objets hybrides entre les «Quipu» et les parures antiques, se lisent à la manière d’un graphique : créé à partir de données, *How Many?* établit un décompte.

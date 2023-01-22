@@ -20,6 +20,7 @@ class Images {
         //getting all images in their respective folders
         
         Object.keys(images).forEach(folderType => {
+            //folderType is the name of folders available in the /images 
             this[folderType] = images[folderType]
             
             //managing ongoing work

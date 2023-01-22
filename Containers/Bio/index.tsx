@@ -1,7 +1,7 @@
 ﻿import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import styled from 'styled-components'
-import {Icons} from "../../Resources";
+import { Close } from '../../Resources/Icons';
 
 const Wrapper = styled.div`
 
@@ -47,7 +47,7 @@ class Bio extends React.Component {
             <Wrapper>
                 
                 <span id="navigation">
-                    <a id='exit' href="#"><Icons i={'close'}/></a>
+                    <a id='exit' href="#"><Close/></a>
                 </span>
                 <h3>Parcours</h3>
 

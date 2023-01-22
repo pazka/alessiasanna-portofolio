@@ -35,5 +35,25 @@ body {
     //overflow-y: hidden;
     padding : 1vw;
     font-family: FiraSans;
-    color : #384AD3;
+    color : white;
+    background-color : black;
+}
+
+[class^="icon-"]{
+  width: 1em;
+  height: 1em;
+}
+
+.icon-pin_circle_filled{
+  .fill{
+    fill: blue;
+  }
+}
+.icon-pin_circle_empty{
+  .fill{
+    fill: black;
+  }
+  .stroke{
+    fill: blue;
+  }
 }

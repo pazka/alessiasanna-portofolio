@@ -4,6 +4,7 @@ import {Icons, Images} from '../../Resources'
 import AlgoDisplay from '../../Components/AlgoDisplay'
 import styled from 'styled-components'
 import CursorTooltip from "../../Components/CursorTooltip";
+import { PinCircleEmpty, PinCircleFilled } from '../../Resources/Icons'
 
 const seedrandom = require('seedrandom')
 
@@ -103,11 +104,11 @@ class WorkMap extends React.Component {
                     <table> 
                         <tbody>  
                             <tr>
-                                <td><Icons i ='pin_filled'/> </td>
+                                <td><PinCircleFilled/> </td>
                                 <td><p> Projets produits</p></td>
                             </tr>
                             <tr>
-                                <td><Icons i ='pin_empty' /></td>
+                                <td><PinCircleEmpty/></td>
                                 <td><p> Projets en cours</p></td>
                             </tr>
                         </tbody>

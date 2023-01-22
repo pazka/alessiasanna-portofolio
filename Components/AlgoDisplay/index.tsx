@@ -14,6 +14,13 @@ const Wrapper = styled.div`
     }
 `
 
+const COLORS = {
+    background : "rgba(0,0,0,0)",
+    dottedLine : "darkblue",
+    fullLine : "#555555",
+    selectorLine : "orange"
+}
+
 class AlgoDisplay extends Component {
     drawSpeed
     canvasRef
@@ -178,12 +185,12 @@ class AlgoDisplay extends Component {
     draw(){
         let cnv = this.canvasRef.current.getContext('2d')
         
-        cnv.fillStyle = "white";
+        cnv.fillStyle = COLORS.background;
         cnv.fillRect(0,0,this.width,this.height)
 
         cnv.save()
         cnv.lineWidth = 0.7;
-        cnv.strokeStyle = "lightblue";
+        cnv.strokeStyle = COLORS.dottedLine;
         cnv.setLineDash([4, 10]);
 
         this.notAddedEdge.forEach(edgeIndex=>{
@@ -195,7 +202,7 @@ class AlgoDisplay extends Component {
         cnv.restore()
 
         cnv.lineWidth = 2;
-        cnv.strokeStyle = "blue";
+        cnv.strokeStyle = COLORS.fullLine;
         this.addedEdge.forEach(edgeIndex=>{
             cnv.beginPath();
             cnv.moveTo( this.cities[edgeIndex[0]][0] , this.cities[edgeIndex[0]][1]);
@@ -217,7 +224,7 @@ class AlgoDisplay extends Component {
 
         if(this.selectedMinimalEdge){
             cnv.lineWidth = 1;
-            cnv.strokeStyle = "orange";
+            cnv.strokeStyle = COLORS.selectorLine;
             
             cnv.beginPath();
             cnv.moveTo( this.cities[this.selectedMinimalEdge[0]][0] , this.cities[this.selectedMinimalEdge[0]][1]);

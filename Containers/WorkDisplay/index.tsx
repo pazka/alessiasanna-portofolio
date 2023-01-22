@@ -5,6 +5,7 @@ import MyImageGallery from '../../Components/MyImageGallery';
 import ReactMarkdown from 'react-markdown'
 import {Images, Texts, Icons} from '../../Resources';
 import {Helmet} from 'react-helmet'
+import { Next, Prev } from '../../Resources/Icons';
 
 
 const Wrapper = styled.div`
@@ -158,11 +159,9 @@ class WorkDisplay extends React.Component {
                 <Wrapper>
                     <span id="navigation">
                         <a id='next'
-                           href={"#" + this.prevWork}>{this.prevWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}<Icons
-                            i={'prev'}/></a>
+                           href={"#" + this.prevWork}>{this.prevWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}<Prev/></a>
                         
-                        <a id='prev' href={"#" + this.nextWork}><Icons
-                            i={'next'}/>{this.nextWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}</a>
+                        <a id='prev' href={"#" + this.nextWork}><Next/>{this.nextWork.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}</a>
                         
                         <a id='exit' href="#"><Icons i={'close'}/></a>
                     </span>
