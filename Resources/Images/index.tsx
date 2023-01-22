@@ -50,7 +50,6 @@ class Images {
                  
             })
         });
-        console.log(this)
     }
     //could add post-treatments here
 }

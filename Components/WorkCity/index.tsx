@@ -16,6 +16,7 @@ position : absolute;
 left : ${props => props.x};
 top : ${props => props.y};
 
+transition : all 0.2s; 
 font-size : large;
 
 
@@ -31,25 +32,27 @@ font-size : large;
     font-size : 0.8rem    
 }
 
-a * {
-    transition : all 0.5s;
+a {
+    transform : scale(1);
 }
 
 .icon{
     font-size : 0.8em;
 }
-
-a:hover {
-    color :  #F3A78F;
-    transition : all 0.2s;  
-    h1,h2,h3,h4,h5{
-        font-size : 1.2em ;
-    }
+&:hover{
+    transition : all 0.2s; 
+    transform : scale(1.2);
+    transition : all 0.5s;  
     
-    .icon{
-        transition : all 0.2s;  
+    a {
+        color :  blue;
+        
+        .icon{
+            transition : all 0.2s;  
+        }
     }
 }
+
 
 
 
