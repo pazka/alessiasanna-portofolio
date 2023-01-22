@@ -43,6 +43,8 @@ const Wrapper = styled.div`
             font-size : 0.8em;
         }     
     }  
+    
+    
 `
 
 class WorkMap extends React.Component {
@@ -64,10 +66,10 @@ class WorkMap extends React.Component {
 
 
         //screen continuous limits
-        let lX = [0.2, 0.75], lY = [0.25, 0.75]
+        let lX = [0.15, 0.8], lY = [0.3, 0.99]
 
         //discrete limits 
-        let lDX = 2, lDY = 3
+        let lDX = 4, lDY = 3
 
         //continous steps to jump = coords system
         let stepX = (lX[1] - lX[0]) / lDX
@@ -81,13 +83,15 @@ class WorkMap extends React.Component {
                 + ((step / rdmAmpl) * Math.random() - ((step / rdmAmpl) / 2)) // rdm Offset
         }
 
+        // Position assignation to cities
+        //The assignation is done from top to bottom then shifting on the right
         this.cities = Object.keys(Images.main).map((cityName, iterator) => {
             let res = {
                 name: cityName,
                 prettyName: cityName.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' '),
                 coords: [
                     boundBox(lX[0], stepX, iX, 1.5, 4) * (window.innerWidth),
-                    boundBox(lY[0], stepY, iY, 1.1, 4) * (window.innerHeight)
+                    boundBox(lY[0], stepY, iY, 1.3, 4) * (window.innerHeight)
                 ],
                 i: iterator,
                 ongoing: Images.ongoingWork.includes(cityName),
@@ -96,9 +100,14 @@ class WorkMap extends React.Component {
                 }).join('')
             }
 
-            iY = iY >= lDY ? 0 : iY + 1
-            iX = iY != 0 ? iX : (iX >= lDX ? 0 : iX + 1)
-            return res;
+            //increase iY and if it is over lDY, reset it and increase iX
+            iY++
+            if (iY >= lDY) {
+                iY = 0
+                iX++
+            }
+            
+            return res
         });
     }
 

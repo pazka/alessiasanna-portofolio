@@ -47,7 +47,7 @@ class Images {
                     this[folderType][normalizedWorkname] = {...this[folderType][workName]}
                     delete this[folderType][workName]
                 }
-                 
+                              
             })
         });
     }
