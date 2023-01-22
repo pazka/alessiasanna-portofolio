@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 }
 
 #navigation > *:hover{    
-    color : rgb(0,0,0,0.1);
+    color : blue;
     transition : all 0.5s;
 }
 
@@ -107,6 +107,19 @@ const Wrapper = styled.div`
                 font-size : 0.8em;
             }
         }
+  }
+  
+  .image-gallery-thumbnail{
+       :hover,:focus{
+          border-color : blue;
+      }
+      :hover {
+        cursor : pointer;
+      }
+  }
+  
+  .active{
+    border-color : blue;
   }
 `;
 

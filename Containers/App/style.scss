@@ -1,26 +1,25 @@
-
 @import "normalize.css";
 @import "sanitize.css";
 
-@font-face{
+@font-face {
   font-family: 'FiraSans';
-  src:  url('../../src/fonts/Fira_Sans/FiraSans-Regular.ttf');
+  src: url('../../src/fonts/Fira_Sans/FiraSans-Regular.ttf');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-@font-face{
+@font-face {
   font-family: 'OpenSansCondensed';
-  src:  url('../../src/fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf');
+  src: url('../../src/fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-@font-face{
+@font-face {
   font-family: 'SpaceMono';
-  src:  url('../../src/fonts/Space_Mono/SpaceMono-Regular.ttf');
+  src: url('../../src/fonts/Space_Mono/SpaceMono-Regular.ttf');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -31,29 +30,35 @@ a {
   color: inherit;
 }
 
-body { 
-    //overflow-y: hidden;
-    padding : 1vw;
-    font-family: FiraSans;
-    color : white;
-    background-color : black;
+body {
+  //overflow-y: hidden;
+  padding: 1vw;
+  font-family: FiraSans;
+  color: white;
+  background-color: black;
 }
 
-[class^="icon-"]{
+[class^="icon-"] {
   width: 1em;
   height: 1em;
 }
 
-.icon-pin_circle_filled{
-  .fill{
+.icon-pin_circle_filled {
+  .fill {
     fill: blue;
   }
 }
-.icon-pin_circle_empty{
-  .fill{
+
+.icon-pin_circle_empty {
+  .fill {
     fill: black;
   }
-  .stroke{
+
+  .stroke {
     fill: blue;
   }
+}
+
+.image-gallery-icon:hover {
+  color: blue !important;
 }
